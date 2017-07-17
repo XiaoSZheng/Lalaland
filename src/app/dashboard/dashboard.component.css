@@ -1,0 +1,135 @@
+#flexContainer {
+  /* Specifies that the contents will be laid out according to Flexbox rules. */
+  display: flex;
+}
+
+header {
+  /* Joy Red #eb5d5e*/
+  background: #383B42;
+  min-height: 15vh;
+  color: white;
+  border-bottom: 1vh solid white;
+  display: flex;
+}
+
+#logo {
+  background: #383B42;
+  float: left;
+  width: 15vw;
+  text-align: center;
+  height:100%;
+}
+
+#logo img {
+  width: 45%;
+}
+
+#headerContent {
+  float: left;
+  padding: 1vh;
+  border-left: 1vh solid white;
+  height: 100%;
+}
+
+nav {
+  background: #383B42;
+  /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
+  flex: 1 1 15%;
+  min-width: 15vw;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0px 10px rgba(14, 14, 14, 0.48) inset;
+}
+
+nav button {
+  padding: 2vh;
+  background: none;
+  border: none;
+  border-bottom: .5vh solid white;
+  color: white;
+  display: flex;
+  outline-style: none;
+}
+
+nav button:hover {
+  background: #454952;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+
+nav button i {
+  width: 1vw;
+  margin-right: 2vw;
+  margin-left: 1vw;
+}
+
+aside {
+  background: #FFF;
+  /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
+  flex: 1 1 15%;
+  min-width: 15vw;
+  box-shadow: 0px 0px 10px rgba(14, 14, 14, 0.48) inset;
+  padding: 2vh;
+}
+
+#content {
+  min-height: 85vh;
+  background: #ABABAB;
+  /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
+  flex: 2 1 70%;
+  border-left: 1vh solid white;
+}
+
+
+/* When the page is resized, use the styles below */
+
+@media all and (max-width: 1050px) {
+  #flexContainer {
+    /* Shorthand property specifying flex-direction and flex-wrap */
+    flex-flow: column wrap;
+  }
+  header {
+    min-height: 7.5vh;
+  }
+  nav {
+    min-height: 5vh;
+    /* Specifying the order so the nav appears as the first item in the flex container */
+    order: 1;
+  }
+  aside {
+    min-height: 5vh;
+    /* Specifying the order so the nav appears as the second item in the flex container */
+    order: 2;
+  }
+  #content {
+    /* Specifying the order so the nav appears as the third item in the flex container */
+    min-height: 7.25vh;
+    order: 3;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  nav button {
+    border: none;
+    width: 100%;
+  }
+  nav button:hover {
+    background: #454952;
+    transition: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  nav {
+    min-width: 300px;
+  }
+  i {
+    margin-left: calc(50% - 0.5rem);
+  }
+}

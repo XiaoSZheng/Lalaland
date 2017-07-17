@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="col-md-12">
+    <h1>Customers</h1>
+    <table class="table table-bordered table-striped table-hover table-responsive">
+      <thead class="thead-inverse">
+        <tr>
+          <th class="text-center">Customer Number</th>
+          <th class="text-center">First Name</th>
+          <th class="text-center">Last Name</th>
+          <th class="text-center">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>{{ customer.customerNumber }}</td>
+          <td>{{ customer.firstN }}</td>
+          <td>{{ customer.lastN }}</td>
+          <td>
+            <button class="btn btn-info" (click)="showEditCustomerForm(customer)">
+                       <i class="fa fa-edit"> Edit</i>
+              </button>
+            <button class="btn btn-danger" (click)="removeCustomer(customer)">
+                       <i class="fa fa-minus"> Delete</i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-success" (click)="showAddCustomerForm()"><i class="fa fa-plus"> New Member</i></button>
+    <br />
+    <br />
+
+    <form *ngIf="customerForm">
+      <h2>Add New Customer</h2>
+      <p>Customer Number: <input type="text" name="customerNumber" [(ngModel)]="newCustomer.customerNumber" /></p>
+      <p>First Name: <input type="text" name="firstN" [(ngModel)]="newCustomer.firstN" /></p>
+      <p>Last Name: <input type="text" name="lastN" [(ngModel)]="newCustomer.lastN" /></p>
+      <p>
+        <button type="button" class="btn btn-primary" (click)="saveCustomer(newCustomer)">Submit</button>
+        <button type="button" class="btn btn-warning" (click)="cancelNewCustomer()">Cancel</button>
+      </p>
+    </form>
+
+    <form *ngIf="editCustomerForm">
+      <h2>Edit Customer Details</h2>
+      <p>Customer Number: <input type="text" name="customerNumber" [(ngModel)]="editedCustomer.customerNumber" /></p>
+      <p>First Name: <input type="text" name="firstN" [(ngModel)]="editedCustomer.firstN" /></p>
+      <p>Last Name: <input type="text" name="lastN" [(ngModel)]="editedCustomer.lastN" /></p>
+      <p>
+        <button type="button" class="btn btn-primary" (click)="updateCustomer(editedCustomer)">Submit</button>
+        <button type="button" class="btn btn-warning" (click)="cancelEdits()">Cancel</button>
+      </p>
+    </form>
+  </div>
+</div>
