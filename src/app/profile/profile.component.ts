@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from '../customer-detail/customer.service';
+import { Customer } from '../customer-detail/customer';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _customerService: CustomerService) { }
 
   ngOnInit() {
   }
 
+  customers = this._customerService.getCustomersFromData();
+
+  customerNbr = this.customers[1].customerNumber;
+  customerFN = this.customers[1].firstN;
+  customerLN = this.customers[1].lastN;
 }

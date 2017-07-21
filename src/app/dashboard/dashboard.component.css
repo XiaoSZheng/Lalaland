@@ -8,7 +8,6 @@ header {
   background: #383B42;
   min-height: 15vh;
   color: white;
-  border-bottom: 1vh solid white;
   display: flex;
 }
 
@@ -27,7 +26,7 @@ header {
 #headerContent {
   float: left;
   padding: 1vh;
-  border-left: 1vh solid white;
+  border-left: 1vh solid #B3BBC6;
   height: 100%;
 }
 
@@ -39,13 +38,15 @@ nav {
   display: flex;
   flex-direction: column;
   box-shadow: -4px 0px 10px rgba(14, 14, 14, 0.48) inset;
+  
+  border-top: 1vh solid #B3BBC6;
 }
 
 nav button {
   padding: 2vh;
   background: none;
   border: none;
-  border-bottom: .5vh solid white;
+  border-bottom: .5vh solid #A2A2A2;
   color: white;
   display: flex;
   outline-style: none;
@@ -74,10 +75,10 @@ aside {
 
 #content {
   min-height: 85vh;
-  background: #ABABAB;
+   background: -webkit-linear-gradient(top, rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%);
+
   /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
   flex: 2 1 70%;
-  border-left: 1vh solid white;
 }
 
 
@@ -103,7 +104,6 @@ aside {
   }
   #content {
     /* Specifying the order so the nav appears as the third item in the flex container */
-    min-height: 7.25vh;
     order: 3;
   }
 }
@@ -117,18 +117,14 @@ aside {
   nav button {
     border: none;
     width: 100%;
+    font-size: 1.5vw;
   }
   nav button:hover {
     background: #454952;
     transition: none;
     cursor: pointer;
   }
-}
 
-@media screen and (max-width: 1050px) {
-  nav {
-    min-width: 300px;
-  }
   i {
     margin-left: calc(50% - 0.5rem);
   }
