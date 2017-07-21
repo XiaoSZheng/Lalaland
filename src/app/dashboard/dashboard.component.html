@@ -1,52 +1,52 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<header>
-  <div id="headerContainer">
-    <div id="logo">
-      <img src="../../assets/QVC.png" />
-    </div>
-    <div id="headerContent">
-      <h1>Header</h1>
-    </div>
-  </div>
-</header>
-<section id="flexContainer">
-  <nav>
-    <button id="landing" routerLink="/Landing Page">
+<div class="">
+    <header class="col-md-12 ">
+        <div id="headerContainer" class="setToLeft">
+            <div id="logo">
+                <img src="../../assets/QVC.png" />
+            </div>
+            <div id="headerContent">
+                <h1>Header</h1>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <section class="col-md-2 setToLeft">
+            <nav>
+                <button id="landing" routerLink="/Landing Page">
       <i class="fa fa-home" aria-hidden="true"></i>
       <span class="text">Landing Page</span>
     </button>
-    <button id="customerDetails" routerLink="./Customer Detail">
+                <button id="customerDetails" routerLink="./Customer Detail">
       <i class="fa fa-info" aria-hidden="true"></i>
       <span class="text">Cust Deats</span>
     </button>
-    <button id="profile" routerLink="./Profile">
+                <button id="profile" routerLink="./Profile">
       <i class="fa fa-user-o" aria-hidden="true"></i>
       <span class="text">Profile</span>
     </button>
-    <button id="Angular4StartUp" routerLink="./Angular4StartUp">
+                <button id="Angular4StartUp" routerLink="./Angular4StartUp">
       <i class="fa fa-font" aria-hidden="true"></i>
-      <span class="text">Angular 4 Start Up</span>
+      <span class="text">Angular 4</span>
     </button>
-    <button id="Material" routerLink="./Material">
-      <i class="fa fa-font" aria-hidden="true"></i>
-      <span class="text">Material Angular</span>
-    </button>
-    <button id="Bootstrap" routerLink="./Bootstrap">
+                <button id="Bootstrap" routerLink="./Bootstrap">
       <i class="fa fa-bold" aria-hidden="true"></i>
       <span class="text">Bootstrap</span>
     </button>
-    <button id="contact" routerLink="./Contact">
+                <button id="contact" routerLink="./Contact">
       <i class="fa fa-address-card-o" aria-hidden="true"></i>
       <span class="text">Contact</span>
     </button>
-    <button id="HeheXD" routerLink="./HeheXD">
+                <button id="HeheXD" routerLink="./HeheXD">
       <i class="fa fa-times-rectangle-o" aria-hidden="true"></i>
       <span class="text">404 Page</span>
     </button>
-  </nav>
-  <section id="content">
-    <router-outlet></router-outlet>
-  </section>
-  <aside>Search function..?!?!?!</aside>
-</section>
+            </nav>
+
+            <!-- <aside>Search function..?!?!?!</aside> -->
+        </section>
+        <section class="col-md-10">
+            <router-outlet></router-outlet>
+        </section>
+    </div>
+</div>

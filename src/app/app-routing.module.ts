@@ -11,7 +11,6 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
 import { ProfileComponent } from './profile/profile.component';
 import { Angular4StartUpComponent } from './angular4-start-up/angular4-start-up.component';
 import { ContactComponent } from './contact/contact.component';
-import { AngularMaterialComponent } from './angular-material/angular-material.component';
 import { AngularBootstrapComponent } from './angular-bootstrap/angular-bootstrap.component';
 
 const appRoutes: Routes = [
@@ -29,6 +28,9 @@ const appRoutes: Routes = [
     component: DashboardComponent,
     children: [
       {
+        path: '',
+        component: CustomerDetailComponent
+      },{
         path: 'Customer Detail',
         component: CustomerDetailComponent
       },
@@ -43,10 +45,6 @@ const appRoutes: Routes = [
       {
         path: 'Contact',
         component: ContactComponent
-      },
-      {
-        path: 'Material',
-        component: AngularMaterialComponent
       },
       {
         path: 'Bootstrap',
