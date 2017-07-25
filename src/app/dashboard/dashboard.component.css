@@ -1,3 +1,13 @@
+#contentContainer {
+    height: 100%;
+}
+
+.row {
+    margin:0;
+    padding: 0;
+    height: 85vh;
+}
+
 header {
     /* Joy Red #eb5d5e*/
     background: #383B42;
@@ -27,13 +37,12 @@ header {
 
 nav {
     background: #383B42;
-    /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
-    flex: 1 1 15%;
-    min-width: 15vw;
+    width: 15.6vw;
     display: flex;
     flex-direction: column;
     box-shadow: -4px 0px 10px rgba(14, 14, 14, 0.48) inset;
     border-top: 1vh solid #B3BBC6;
+    height: 85vh;
 }
 
 nav button {
@@ -59,8 +68,8 @@ nav button i {
 }
 
 .setToLeft {
-    margin-left: 0;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -76,6 +85,7 @@ nav button i {
     }
     nav {
         min-height: 5vh;
+        height: 15vh;
         /* Specifying the order so the nav appears as the first item in the flex container */
         order: 1;
     }
