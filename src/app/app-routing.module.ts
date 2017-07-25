@@ -30,7 +30,8 @@ const appRoutes: Routes = [
       {
         path: '',
         component: CustomerDetailComponent
-      },{
+      },
+      {
         path: 'Customer Detail',
         component: CustomerDetailComponent
       },

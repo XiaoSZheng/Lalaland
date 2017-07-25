@@ -25,12 +25,43 @@
   cursor: pointer;
   user-select: none;
   margin: 0;
-  border-bottom: .5vh solid rgba(255,255,255,.5);
+  border-bottom: .5vh solid rgba(255, 255, 255, .5);
 }
 
 .box-content {
   padding: 30px 20px;
   display: none;
+}
+
+.accordion1Content button {
+  color: black;
+  font-weight: bold;
+  margin: 2vh;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.accordion1Content button:hover {
+  font-weight: bold;
+  margin: 2vh;
+  cursor: pointer;
+  text-align: center;
+  -webkit-animation: bounce 0.75s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1, 1) translate(0px, 0px);
+  }
+  30% {
+    transform: scale(1, 0.8) translate(0px, 5px);
+  }
+  75% {
+    transform: scale(1, 1.1) translate(0px, -10px);
+  }
+  100% {
+    transform: scale(1, 1) translate(0px, 0px);
+  }
 }
 
 .box-close {
