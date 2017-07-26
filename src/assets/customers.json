@@ -1,0 +1,330 @@
+[{
+    "name": "Leanne Graham",
+    "account": "929983874",
+    "phoneNumber": "770-736-8031",
+    "address": "1234 Pecos Trail, Belton, TX",
+    "birthday": "April 16, 1998",
+    "purchaseHistory": [{
+            "item": "Blue Jean Pants",
+            "price": "26.63",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["clothing", "fashion", "LL Bean"]
+        },
+        {
+            "item": "Blue Jean Jacket",
+            "price": "36.63",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["clothing", "fashion", "LL Bean"]
+        },
+        {
+            "item": "Red Purse",
+            "price": "126.63",
+            "paymentType": "MasterCard",
+            "date": "2016/02/07",
+            "progress": "1",
+            "category": ["purse", "fashion", "LL Bean"]
+        },
+        {
+            "item": "KitchenAid Mixer",
+            "price": "223.63",
+            "paymentType": "Visa",
+            "date": "2017/07/16",
+            "progress": "2",
+            "category": ["Kitchen", "Cooking", "KitchenAid"]
+        },
+        {
+            "item": "Yoga Mat",
+            "price": "76.63",
+            "paymentType": "Visa",
+            "date": "2013/01/02",
+            "progress": "3",
+            "category": ["fitness", "health", "yoga"]
+        }
+    ]
+}, {
+    "name": "Ervin Howell",
+    "account": "92998567",
+    "phoneNumber": "010-692-6593",
+    "address": "803 Canyon Drive, San Diego, CA",
+    "birthday": "June 16, 1988",
+    "purchaseHistory": [{
+            "item": "Digger Tool",
+            "price": "21.25",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["gardening", "tools", "outdoor"]
+        },
+        {
+            "item": "Coconut Broom",
+            "price": "36.63",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["gardening", "tools", "outdoor"]
+        },
+        {
+            "item": "Garden Tiller",
+            "price": "109.63",
+            "paymentType": "MasterCard",
+            "date": "2013/02/07",
+            "progress": "1",
+            "category": ["gardening", "machine", "on-sale"]
+        },
+        {
+            "item": "Char-Broil Smoker",
+            "price": "219.63",
+            "paymentType": "Visa",
+            "date": "2016/09/16",
+            "progress": "2",
+            "category": ["cooking", "outdoor", "on-sale"]
+        },
+        {
+            "item": "Black & Decker Hedge Trimmer",
+            "price": "60.19",
+            "paymentType": "Visa",
+            "date": "2012/01/02",
+            "progress": "3",
+            "category": ["gardening", "machine", "on-sale"]
+        }
+    ]
+}, {
+    "name": "Catherine Freeman",
+    "account": "92998432",
+    "phoneNumber": "010-632-9637",
+    "address": "803 Belmont Drive, Denver, CO",
+    "birthday": "December 4, 1978",
+    "purchaseHistory": [{
+            "item": "Microsoft office 365",
+            "price": "69.25",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["technology", "computers", "office"]
+        },
+        {
+            "item": "Office Star Char",
+            "price": "36.63",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["office", "furniture"]
+        },
+        {
+            "item": "Mother-of-pearl Pen",
+            "price": "109.63",
+            "paymentType": "MasterCard",
+            "date": "2013/02/07",
+            "progress": "1",
+            "category": ["supplies", "stationary", "office"]
+        },
+        {
+            "item": "Royal Paper Shredder",
+            "price": "132.63",
+            "paymentType": "Visa",
+            "date": "2016/09/16",
+            "progress": "2",
+            "category": ["office", "supplies", "on-sale"]
+        },
+        {
+            "item": "Bamboo Calculator",
+            "price": "60.19",
+            "paymentType": "Visa",
+            "date": "2012/01/02",
+            "progress": "3",
+            "category": ["office", "supplies", "on-sale", "technology"]
+        }
+    ]
+}, {
+    "name": "Sarah Freeman",
+    "account": "92998764",
+    "phoneNumber": "010-632-9637",
+    "address": "803 Belmont Drive, Denver, CO",
+    "birthday": "December 4, 1978",
+    "purchaseHistory": [{
+            "item": "Microsoft office 365",
+            "price": "69.25",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["technology", "computers", "office"]
+        },
+        {
+            "item": "Office Star Char",
+            "price": "36.63",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["office", "furniture"]
+        },
+        {
+            "item": "Mother-of-pearl Pen",
+            "price": "109.63",
+            "paymentType": "MasterCard",
+            "date": "2013/02/07",
+            "progress": "1",
+            "category": ["supplies", "stationary", "office"]
+        },
+        {
+            "item": "Royal Paper Shredder",
+            "price": "132.63",
+            "paymentType": "Visa",
+            "date": "2016/09/16",
+            "progress": "2",
+            "category": ["office", "supplies", "on-sale"]
+        },
+        {
+            "item": "Bamboo Calculator",
+            "price": "60.19",
+            "paymentType": "Visa",
+            "date": "2012/01/02",
+            "progress": "3",
+            "category": ["office", "supplies", "on-sale", "technology"]
+        }
+    ]
+}, {
+    "name": "Catherine Freeman",
+    "account": "92998123",
+    "phoneNumber": "010-632-9637",
+    "address": "803 Belmont Drive, Denver, CO",
+    "birthday": "December 4, 1978",
+    "purchaseHistory": [{
+            "item": "Microsoft office 365",
+            "price": "69.25",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["technology", "computers", "office"]
+        },
+        {
+            "item": "Office Star Char",
+            "price": "36.63",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["office", "furniture"]
+        },
+        {
+            "item": "Mother-of-pearl Pen",
+            "price": "109.63",
+            "paymentType": "MasterCard",
+            "date": "2013/02/07",
+            "progress": "1",
+            "category": ["supplies", "stationary", "office"]
+        },
+        {
+            "item": "Royal Paper Shredder",
+            "price": "132.63",
+            "paymentType": "Visa",
+            "date": "2016/09/16",
+            "progress": "2",
+            "category": ["office", "supplies", "on-sale"]
+        },
+        {
+            "item": "Bamboo Calculator",
+            "price": "60.19",
+            "paymentType": "Visa",
+            "date": "2012/01/02",
+            "progress": "3",
+            "category": ["office", "supplies", "on-sale", "technology"]
+        }
+    ]
+}, {
+    "name": "Catherine Freemont",
+    "account": "98958432",
+    "phoneNumber": "010-632-9637",
+    "address": "803 Belmont Drive, Denver, CO",
+    "birthday": "December 4, 1978",
+    "purchaseHistory": [{
+            "item": "Microsoft office 365",
+            "price": "69.25",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["technology", "computers", "office"]
+        },
+        {
+            "item": "Office Star Char",
+            "price": "36.63",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["office", "furniture"]
+        },
+        {
+            "item": "Mother-of-pearl Pen",
+            "price": "109.63",
+            "paymentType": "MasterCard",
+            "date": "2013/02/07",
+            "progress": "1",
+            "category": ["supplies", "stationary", "office"]
+        },
+        {
+            "item": "Royal Paper Shredder",
+            "price": "132.63",
+            "paymentType": "Visa",
+            "date": "2016/09/16",
+            "progress": "2",
+            "category": ["office", "supplies", "on-sale"]
+        },
+        {
+            "item": "Bamboo Calculator",
+            "price": "60.19",
+            "paymentType": "Visa",
+            "date": "2012/01/02",
+            "progress": "3",
+            "category": ["office", "supplies", "on-sale", "technology"]
+        }
+    ]
+}, {
+    "name": "Catherine Allison",
+    "account": "92123312",
+    "phoneNumber": "010-632-9637",
+    "address": "803 Belmont Drive, Denver, CO",
+    "birthday": "December 4, 1978",
+    "purchaseHistory": [{
+            "item": "Microsoft office 365",
+            "price": "69.25",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["technology", "computers", "office"]
+        },
+        {
+            "item": "Office Star Char",
+            "price": "36.63",
+            "paymentType": "Visa",
+            "date": "2016/06/16",
+            "progress": "1",
+            "category": ["office", "furniture"]
+        },
+        {
+            "item": "Mother-of-pearl Pen",
+            "price": "109.63",
+            "paymentType": "MasterCard",
+            "date": "2013/02/07",
+            "progress": "1",
+            "category": ["supplies", "stationary", "office"]
+        },
+        {
+            "item": "Royal Paper Shredder",
+            "price": "132.63",
+            "paymentType": "Visa",
+            "date": "2016/09/16",
+            "progress": "2",
+            "category": ["office", "supplies", "on-sale"]
+        },
+        {
+            "item": "Bamboo Calculator",
+            "price": "60.19",
+            "paymentType": "Visa",
+            "date": "2012/01/02",
+            "progress": "3",
+            "category": ["office", "supplies", "on-sale", "technology"]
+        }
+    ]
+}]

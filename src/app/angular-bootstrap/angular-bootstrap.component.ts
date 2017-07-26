@@ -20,6 +20,7 @@ const states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'C
   styleUrls: ['./angular-bootstrap.component.css']
 })
 export class AngularBootstrapComponent {
+  public model: any;
   search = (text$: Observable<string>) =>
     map.call(distinctUntilChanged.call(debounceTime.call(text$, 200)),
       term => term.length < 2 ? [] : states.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10));

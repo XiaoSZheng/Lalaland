@@ -3,7 +3,7 @@
 }
 
 .row {
-    margin:0;
+    margin: 0;
     padding: 0;
     height: 85vh;
 }
@@ -70,53 +70,4 @@ nav button i {
 .setToLeft {
     margin: 0;
     padding: 0;
-}
-
-
-/* When the page is resized, use the styles below */
-
-@media all and (max-width: 1050px) {
-    #flexContainer {
-        /* Shorthand property specifying flex-direction and flex-wrap */
-        flex-flow: column wrap;
-    }
-    header {
-        min-height: 7.5vh;
-    }
-    nav {
-        min-height: 5vh;
-        height: 15vh;
-        /* Specifying the order so the nav appears as the first item in the flex container */
-        order: 1;
-    }
-    aside {
-        min-height: 5vh;
-        /* Specifying the order so the nav appears as the second item in the flex container */
-        order: 2;
-    }
-    #content {
-        /* Specifying the order so the nav appears as the third item in the flex container */
-        order: 3;
-    }
-}
-
-@media screen and (max-width: 1050px) {
-    nav {
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-    }
-    nav button {
-        border: none;
-        width: 100%;
-        font-size: 1.5vw;
-    }
-    nav button:hover {
-        background: #454952;
-        transition: none;
-        cursor: pointer;
-    }
-    i {
-        margin-left: calc(50% - 0.5rem);
-    }
 }

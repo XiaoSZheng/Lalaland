@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../customer-detail/customer.service';
-import { Customer } from '../customer-detail/customer';
+import { Customer } from '../objects/customer';
 
 @Component({
   selector: 'app-profile',
@@ -9,14 +9,16 @@ import { Customer } from '../customer-detail/customer';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private _customerService: CustomerService) { }
+  private customers;
+
+   constructor(private _customerService: CustomerService) {
+        _customerService.matchedNamesSubject.subscribe((customerList) => {
+        console.log(customerList);
+        this.customers = customerList;
+    });
+   }
 
   ngOnInit() {
   }
 
-  customers = this._customerService.getCustomersFromData();
-
-  customerNbr = this.customers[1].customerNumber;
-  customerFN = this.customers[1].firstN;
-  customerLN = this.customers[1].lastN;
 }

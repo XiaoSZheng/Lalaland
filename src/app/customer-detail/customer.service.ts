@@ -1,33 +1,28 @@
-import { Injectable } from '@angular/core';
-import { Customer } from './customer';
-import { CUSTOMERS } from './customer-data';
+import { Injectable, OnInit } from '@angular/core';
+import { Customer } from '../objects/customer';
 import { findIndex } from 'lodash';
+import { Subject } from "rxjs/Subject";
+import { Http } from "@angular/http";
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class CustomerService {
+export class CustomerService{
 
-  private currentCust = CUSTOMERS;
+  private currentCustomer: Customer = new Customer();
+  private currentCust: Customer[];
+  public matchedNamesSubject = new Subject<any>();
 
-  getCustomersFromData(): Customer[] {
-    console.log(this.currentCust);
-    return this.currentCust
-  }
+  constructor(private http:Http){
+   }
 
-  addCustomer(customer: Customer) {
-    this.currentCust.push(customer);
-    console.log(this.currentCust);
-  }
+  getCustomersFromData() {
+      this.http.get("../assets/customers.json")
+      .toPromise()
+      .then(response => {
+        this.currentCust = response.json();
+        this.matchedNamesSubject.next(this.currentCust);
+        });
+      };
 
-  updateCustomer(customer: Customer) {
-    let index = findIndex(this.currentCust, (cc: Customer) => {
-      return cc.customerNumber === customer.customerNumber;
-    });
-    this.currentCust[index] = customer;
-  }
-
-  deleteCustomer(customer: Customer) {
-    this.currentCust.splice(this.currentCust.indexOf(customer), 1);
-    console.log(this.currentCust);
-  }
-
+  
 }

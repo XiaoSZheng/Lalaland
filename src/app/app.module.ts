@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -35,6 +36,7 @@ import { CustomerService } from './customer-detail/customer.service';
   imports: [
     FormsModule,
     BrowserModule,
+    HttpModule,
     AppRoutingModule,
     NgbModule.forRoot()
   ],

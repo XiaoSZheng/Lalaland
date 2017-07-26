@@ -1,110 +1,110 @@
 <nav class="accordion arrows">
-  <!-- Accordion 1  -->
-  <input type="radio" name="accordion" id="cb0" />
-  <section class="box">
-    <label class="box-title" for="cb0">Why Angular 4?</label>
-    <label class="box-close" for="acc-close"></label>
-    <div class="box-content" style="width: 100%;text-align:center;">
-      <div class="accordion1Content">
-        <!-- Modal 1  -->
-        <ng-template #content1 let-c="close" let-d="dismiss">
-          <div class="modal-header">
-            <h4 class="modal-title">Cross Platform</h4>
-            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')"><span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <p>One fine body text&hellip;</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-          </div>
-        </ng-template>
+    <!-- Accordion 1  -->
+    <input type="radio" name="accordion" id="cb0" />
+    <section class="box">
+        <label class="box-title" for="cb0">Why Angular 4?</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content" style="width: 100%;text-align:center;">
+            <div class="accordion1Content">
+                <!-- Modal 1  -->
+                <ng-template #content1 let-c="close" let-d="dismiss">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Cross Platform</h4>
+                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Sample Modal Using Click Events in Component</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+                    </div>
+                </ng-template>
 
-        <button class="btn btn-link bounce" (click)="open(content1)">Cross Platform</button>
+                <button class="btn btn-link bounce" (click)="open(content1)">Cross Platform</button>
 
-        <!-- Modal 2  -->
-        <ng-template #content2 let-c="close" let-d="dismiss">
-          <div class="modal-header">
-            <h4 class="modal-title">Performance</h4>
-            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')"><span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <p>One fine t&hellip;</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-          </div>
-        </ng-template>
+                <!-- Modal 2  -->
+                <ng-template #content2 let-c="close" let-d="dismiss">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Performance</h4>
+                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Sample Modal Using Click Events in Component</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+                    </div>
+                </ng-template>
 
-        <button class="btn btn-link" (click)="open(content2)">Fast Performance</button>
+                <button class="btn btn-link" (click)="open(content2)">Fast Performance</button>
 
-        <!-- Modal 3  -->
-        <ng-template #content3 let-c="close" let-d="dismiss">
-          <div class="modal-header">
-            <h4 class="modal-title">Productivity</h4>
-            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')"><span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <p>One fine teeeee&hellip;</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-          </div>
-        </ng-template>
+                <!-- Modal 3  -->
+                <ng-template #content3 let-c="close" let-d="dismiss">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Productivity</h4>
+                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Sample Modal Using Click Events in Component</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+                    </div>
+                </ng-template>
 
-        <button class="btn btn-link" (click)="open(content3)">Productivity</button>
-      </div>
-    </div>
-  </section>
-  <!-- Accordion 2  -->
-  <input type="radio" name="accordion" id="cb1" />
-  <section class="box">
-    <label class="box-title" for="cb1">Get Started: Development Environment Setup</label>
-    <label class="box-close" for="acc-close"></label>
-    <div class="box-content">
-      <p>1. Visit <a href="https://nodejs.org/en/download/" target="_blank">Node.js</a> and download.</p>
-      <br>
-      <p>2. Go to your environment variables and attach Node path into PATH.</p>
-      <br>
-      <p>3. Visit <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code </a>and download.</p>
-      <br>
-      <p>4. Open VSCode, open cmd.exe, go to proper directory for projects and run the command: "npm install -g @angular/cli"</p>
-    </div>
-  </section>
-  <!-- Accordion 3  -->
-  <input type="radio" name="accordion" id="cb2" />
-  <section class="box">
-    <label class="box-title" for="cb2">New Project</label>
-    <label class="box-close" for="acc-close"></label>
-    <div class="box-content">
-      <p>1. Within the terminal, generate a new project by running the command: "ng new my-app"</p>
-      <br>
-      <p>2. Once it is finished, enter the directory and launch the server with the commands: "cd my-app" and "ng serve"</p>
-      <br>
-      <p>3. Visit <a href="http://localhost:4200/" target="_blank">http://localhost:4200/</a></p>
-    </div>
-  </section>
-  <!-- Accordion 4  -->
-  <input type="radio" name="accordion" id="cb3" />
-  <section class="box">
-    <label class="box-title" for="cb3">HELLO WORLD</label>
-    <label class="box-close" for="acc-close"></label>
-    <div class="box-content">!</div>
-  </section>
-  <!-- Accordion 5  -->
-  <input type="radio" name="accordion" id="cb4" />
-  <section class="box">
-    <label class="box-title" for="cb4">Resources</label>
-    <label class="box-close" for="acc-close"></label>
-    <div class="box-content">
-      <h3>Links</h3>
-      <br>
-      <p><a href="https://coursetro.com/courses/12/Learn-Angular-4-from-Scratch" target="_blank">Learn Angular 4 From Scratch</a></p>
-      <br>
-      <p><a href="https://angular.io/" target="_blank">Angular's Mainpage</a></p>
-      <br>
-      <p>Servicing IE requires polyfills.ts edit to import IE packages and edit target in tsconfig.app to run module es5.</p>
-    </div>
-  </section>
-  <input type="radio" name="accordion" id="acc-close" />
+                <button class="btn btn-link" (click)="open(content3)">Productivity</button>
+            </div>
+        </div>
+    </section>
+    <!-- Accordion 2  -->
+    <input type="radio" name="accordion" id="cb1" />
+    <section class="box">
+        <label class="box-title" for="cb1">Get Started: Development Environment Setup</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">
+            <p>1. Visit <a href="https://nodejs.org/en/download/" target="_blank">Node.js</a> and download.</p>
+            <br>
+            <p>2. Go to your environment variables and attach Node path into PATH.</p>
+            <br>
+            <p>3. Visit <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code </a>and download.</p>
+            <br>
+            <p>4. Open VSCode, open cmd.exe, go to proper directory for projects and run the command: "npm install -g @angular/cli"</p>
+        </div>
+    </section>
+    <!-- Accordion 3  -->
+    <input type="radio" name="accordion" id="cb2" />
+    <section class="box">
+        <label class="box-title" for="cb2">New Project</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">
+            <p>1. Within the terminal, generate a new project by running the command: "ng new my-app"</p>
+            <br>
+            <p>2. Once it is finished, enter the directory and launch the server with the commands: "cd my-app" and "ng serve"</p>
+            <br>
+            <p>3. Visit <a href="http://localhost:4200/" target="_blank">http://localhost:4200/</a></p>
+        </div>
+    </section>
+    <!-- Accordion 4  -->
+    <input type="radio" name="accordion" id="cb3" />
+    <section class="box">
+        <label class="box-title" for="cb3">HELLO WORLD</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">!</div>
+    </section>
+    <!-- Accordion 5  -->
+    <input type="radio" name="accordion" id="cb4" />
+    <section class="box">
+        <label class="box-title" for="cb4">Resources</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">
+            <h3>Links</h3>
+            <br>
+            <p><a href="https://coursetro.com/courses/12/Learn-Angular-4-from-Scratch" target="_blank">Learn Angular 4 From Scratch</a></p>
+            <br>
+            <p><a href="https://angular.io/" target="_blank">Angular's Mainpage</a></p>
+            <br>
+            <p>Servicing IE requires polyfills.ts edit to import IE packages and edit target in tsconfig.app to run module es5.</p>
+        </div>
+    </section>
+    <input type="radio" name="accordion" id="acc-close" />
 </nav>

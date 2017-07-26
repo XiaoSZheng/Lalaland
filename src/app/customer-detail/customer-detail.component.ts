@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from './customer.service';
-import { Customer } from './customer';
+import { Customer } from '../objects/customer';
 import { clone } from 'lodash';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-detail',
@@ -10,55 +11,34 @@ import { clone } from 'lodash';
 })
 export class CustomerDetailComponent implements OnInit {
 
-  customers: Customer[];
+  customers:any = [];
   customerForm: boolean = false;
   editCustomerForm: boolean = false;
   isNewForm: boolean;
   newCustomer: any = {};
   editedCustomer: any = {};
-  constructor(private _customerService: CustomerService) { }
+  viewData:number = 0;
+
+  constructor(private _customerService: CustomerService, private router:Router) {
+        _customerService.matchedNamesSubject.subscribe((customerList) => {
+        console.log(customerList);
+        this.customers = customerList;
+    });
+   }
 
   ngOnInit() {
-    this.getCustomers();
+  //this._customerService.getCustomersFromData();
   }
 
-  getCustomers() {
-    this.customers = this._customerService.getCustomersFromData();
+  searchForCustomer(){
+    this._customerService.getCustomersFromData();
+    this.viewData = 1;
   }
 
-  showEditCustomerForm(customer: Customer) {
-    if (!customer) {
-      this.customerForm = false;
-      return;
-    }
-    this.editCustomerForm = true;
-    this.editedCustomer = clone(customer);
+  showEditCustomerForm() {
+    this.router.navigate(['/Dashboard/Profile']);
   }
 
-  showAddCustomerForm() {
-    if (this.customers.length) {
-      this.newCustomer = {};
-    }
-    this.customerForm = true;
-    this.isNewForm = true;
-  }
-
-  saveCustomer(customer: Customer) {
-    if (this.isNewForm) {
-      this._customerService.addCustomer(customer);
-    }
-    this.customerForm = false;
-  }
-
-  removeCustomer(customer: Customer) {
-    this._customerService.deleteCustomer(customer);
-  }
-
-  updateCustomer() {
-    this._customerService.updateCustomer(this.editedCustomer);
-    this.editCustomerForm = false;
-    this.editedCustomer = {};
-  }
 
   cancelNewCustomer() {
     this.newCustomer = {};
