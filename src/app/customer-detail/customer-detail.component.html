@@ -58,11 +58,14 @@
         </div>
     </div>
     <div class="col-md-12 table-responsive" *ngIf="viewData == 1">
-        <h1>Customers</h1>
+        <label>Account:</label>
+        <input type="text" class="input input-md" [(ngModel)]="accountNumber" (keyup)="findByAccount();" />
+        <label>Name:</label>
+        <input type="text" class="input input-md" [(ngModel)]="accountName" (keyup)="findByName();" />
         <table class="table table-bordered table-striped table-hover" style="background-color:white;">
             <thead class="thead-inverse">
                 <tr>
-                    <th class="text-center">Customer Number</th>
+                    <th class="text-center">Account Number</th>
                     <th class="text-center">First Name</th>
                     <th class="text-center">Address</th>
                     <th class="text-center">&nbsp;</th>
@@ -88,14 +91,20 @@
         <br />
         <br />
     </div>
-
     <div *ngIf="viewData == 2">
         <div>
             <div *ngFor="let customer of customers" class="col-md-12 " style="background-color:white;">
                 <h5>{{customer.name}}</h5>
-                <p>
-                    {{customer.account}}, {{customer.address}}, {{customer.birthday}}, {{customer.phoneNumber}}
-                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            {{customer.account}}, {{customer.address}}, {{customer.birthday}}, {{customer.phoneNumber}}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <button class=" btn btn-primary" (click)="goToProfile(customer);">Select</button>
+                    </div>
+                </div>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped table-hover">
                         <thead class="thead-inverse">

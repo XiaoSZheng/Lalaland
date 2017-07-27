@@ -14,7 +14,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ContactComponent } from './contact/contact.component';
 import { Angular4StartUpComponent } from './angular4-start-up/angular4-start-up.component';
 import { AngularBootstrapComponent } from './angular-bootstrap/angular-bootstrap.component';
 
@@ -29,7 +28,6 @@ import { CustomerService } from './customer-detail/customer.service';
     DashboardComponent,
     CustomerDetailComponent,
     ProfileComponent,
-    ContactComponent,
     Angular4StartUpComponent,
     AngularBootstrapComponent
   ],

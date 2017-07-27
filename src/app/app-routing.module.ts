@@ -10,7 +10,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 import { ProfileComponent } from './profile/profile.component';
 import { Angular4StartUpComponent } from './angular4-start-up/angular4-start-up.component';
-import { ContactComponent } from './contact/contact.component';
 import { AngularBootstrapComponent } from './angular-bootstrap/angular-bootstrap.component';
 
 const appRoutes: Routes = [
@@ -42,10 +41,6 @@ const appRoutes: Routes = [
       {
         path: 'Angular4StartUp',
         component: Angular4StartUpComponent
-      },
-      {
-        path: 'Contact',
-        component: ContactComponent
       },
       {
         path: 'Bootstrap',

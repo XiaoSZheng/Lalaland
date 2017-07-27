@@ -8,12 +8,12 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class CustomerService{
 
-  private currentCustomer: Customer = new Customer();
+  public currentCustomer = new Subject<any>();
+  private currentCustSingle: Customer;
   private currentCust: Customer[];
   public matchedNamesSubject = new Subject<any>();
 
-  constructor(private http:Http){
-   }
+  constructor(private http:Http){ }
 
   getCustomersFromData() {
       this.http.get("../assets/customers.json")
@@ -22,7 +22,10 @@ export class CustomerService{
         this.currentCust = response.json();
         this.matchedNamesSubject.next(this.currentCust);
         });
-      };
+      }; 
 
-  
+  setCurrentCustomer(customer){
+    this.currentCustSingle = customer;
+    this.currentCustomer.next(this.currentCustSingle);
+  }
 }
