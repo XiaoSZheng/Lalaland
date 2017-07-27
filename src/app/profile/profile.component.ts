@@ -10,7 +10,7 @@ import { Customer } from '../objects/customer';
 export class ProfileComponent implements OnInit {
 
   private customers;
-  public currentCustomer: Customer = new Customer();
+  public currentCustomer: Customer;
 
   constructor(private _customerService: CustomerService) {
     _customerService.matchedNamesSubject.subscribe((customerList) => {
@@ -20,11 +20,11 @@ export class ProfileComponent implements OnInit {
 
     _customerService.currentCustomer.subscribe((customer) => {
       this.currentCustomer = customer;
-      console.log(this.currentCustomer);
     });
   }
 
   ngOnInit() {
+    this.currentCustomer = this._customerService.getCurrentCustomer();
   }
 
 }

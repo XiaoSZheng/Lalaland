@@ -67,6 +67,7 @@ export class CustomerDetailComponent implements OnInit {
   }
 
   goToProfile(cust){
+    console.log("Customer Detail; " + cust);
     this._customerService.setCurrentCustomer(cust);
     this.router.navigate(['/Dashboard/Profile']);
   }

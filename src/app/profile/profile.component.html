@@ -1,14 +1,11 @@
 <div id="container">
-  <h1>Profile</h1>
-  <div class="user-card flex-container float-up delay-1">
-    <div class="user-info">
-      <h1>Customer</h1>
-      <p>Customer Number: {{ customerNbr }}</p>
-      <p>First Name: {{ customerFN }}</p>
-      <p>Last Name: {{ customerLN }}</p>
+    <h1>Profile</h1>
+    <div class="user-card flex-container float-up delay-1" *ngIf="currentCustomer">
+        <div class="user-info">
+            <h1>Customer</h1>
+            <p>Number: {{ currentCustomer.account }}</p>
+            <p>Name: {{ currentCustomer.name }}</p>
+            <p>Address: {{ currentCustomer.address }}</p>
+        </div>
     </div>
-  </div>
-
-  
-  <p>{{ currentCustomer.name }}</p>
 </div>
