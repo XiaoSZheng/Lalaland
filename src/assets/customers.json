@@ -96,11 +96,11 @@
     "name": "Catherine Freeman",
     "account": "92998432",
     "phoneNumber": "010-632-9637",
-    "address": "803 Belmont Drive, Denver, CO",
+    "address": "1365 Enterprise Drive, West Chester, PA ",
     "birthday": "December 4, 1978",
     "purchaseHistory": [{
-            "item": "Microsoft office 365",
-            "price": "69.25",
+            "item": "Asus VG248QE",
+            "price": "270.00",
             "paymentType": "Visa",
             "date": "2016/06/16",
             "progress": "1",
@@ -109,7 +109,7 @@
         {
             "item": "Office Star Char",
             "price": "36.63",
-            "paymentType": "Visa",
+            "paymentType": "MasterCard",
             "date": "2016/06/16",
             "progress": "1",
             "category": ["office", "furniture"]
@@ -123,12 +123,12 @@
             "category": ["supplies", "stationary", "office"]
         },
         {
-            "item": "Royal Paper Shredder",
-            "price": "132.63",
+            "item": "Logitech G502 Proteus Core",
+            "price": "60.00",
             "paymentType": "Visa",
             "date": "2016/09/16",
             "progress": "2",
-            "category": ["office", "supplies", "on-sale"]
+            "category": ["technology", "computers", "office"]
         },
         {
             "item": "Bamboo Calculator",
@@ -143,15 +143,15 @@
     "name": "Sarah Freeman",
     "account": "92998764",
     "phoneNumber": "010-632-9637",
-    "address": "803 Belmont Drive, Denver, CO",
+    "address": "1200 Wilson Drive, West Chester, PA",
     "birthday": "December 4, 1978",
     "purchaseHistory": [{
-            "item": "Microsoft office 365",
-            "price": "69.25",
+            "item": "GeForce GTX 1080",
+            "price": "519.99",
             "paymentType": "Visa",
-            "date": "2016/06/16",
+            "date": "2017/07/20",
             "progress": "1",
-            "category": ["technology", "computers", "office"]
+            "category": ["technology", "computers"]
         },
         {
             "item": "Office Star Char",
@@ -170,12 +170,12 @@
             "category": ["supplies", "stationary", "office"]
         },
         {
-            "item": "Royal Paper Shredder",
-            "price": "132.63",
-            "paymentType": "Visa",
-            "date": "2016/09/16",
+            "item": "HTC Vive",
+            "price": "799.00",
+            "paymentType": "MasterCard",
+            "date": "2016/11/16",
             "progress": "2",
-            "category": ["office", "supplies", "on-sale"]
+            "category": ["technology", "computers"]
         },
         {
             "item": "Bamboo Calculator",
@@ -190,7 +190,7 @@
     "name": "Catherine Freeman",
     "account": "92998123",
     "phoneNumber": "010-632-9637",
-    "address": "803 Belmont Drive, Denver, CO",
+    "address": "70 Bowman Street, South Windsor, CT",
     "birthday": "December 4, 1978",
     "purchaseHistory": [{
             "item": "Microsoft office 365",
@@ -201,12 +201,12 @@
             "category": ["technology", "computers", "office"]
         },
         {
-            "item": "Office Star Char",
-            "price": "36.63",
+            "item": "Salt Shaker",
+            "price": "5.99",
             "paymentType": "Visa",
-            "date": "2016/06/16",
+            "date": "2013/03/26",
             "progress": "1",
-            "category": ["office", "furniture"]
+            "category": ["kitchen", "supplies"]
         },
         {
             "item": "Mother-of-pearl Pen",
@@ -225,35 +225,35 @@
             "category": ["office", "supplies", "on-sale"]
         },
         {
-            "item": "Bamboo Calculator",
-            "price": "60.19",
+            "item": "Trendnet TEW-809UB",
+            "price": "72.99",
             "paymentType": "Visa",
-            "date": "2012/01/02",
+            "date": "2012/12/25",
             "progress": "3",
-            "category": ["office", "supplies", "on-sale", "technology"]
+            "category": ["office", "on-sale", "technology"]
         }
     ]
 }, {
     "name": "Catherine Freemont",
     "account": "98958432",
     "phoneNumber": "010-632-9637",
-    "address": "803 Belmont Drive, Denver, CO",
+    "address": "4 Goldfield Rd, Honolulu, HI",
     "birthday": "December 4, 1978",
     "purchaseHistory": [{
-            "item": "Microsoft office 365",
-            "price": "69.25",
-            "paymentType": "Visa",
-            "date": "2016/06/16",
+            "item": "EasyEdge Lightweight Hard Floor Sweeper",
+            "price": "16.44",
+            "paymentType": "MasterCard",
+            "date": "2017/10/12",
             "progress": "1",
-            "category": ["technology", "computers", "office"]
+            "category": ["technology", "on-sale", "supplies"]
         },
         {
-            "item": "Office Star Char",
-            "price": "36.63",
+            "item": "Comfortiva Leather Sandals - Flores",
+            "price": "75.85",
             "paymentType": "Visa",
-            "date": "2016/06/16",
+            "date": "2011/02/16",
             "progress": "1",
-            "category": ["office", "furniture"]
+            "category": ["apparel", "on-sale", "shoes"]
         },
         {
             "item": "Mother-of-pearl Pen",
@@ -264,12 +264,12 @@
             "category": ["supplies", "stationary", "office"]
         },
         {
-            "item": "Royal Paper Shredder",
-            "price": "132.63",
+            "item": "Logitech G440",
+            "price": "26.88",
             "paymentType": "Visa",
             "date": "2016/09/16",
             "progress": "2",
-            "category": ["office", "supplies", "on-sale"]
+            "category": ["office", "supplies", "technology","on-sale"]
         },
         {
             "item": "Bamboo Calculator",
@@ -284,31 +284,31 @@
     "name": "Catherine Allison",
     "account": "92123312",
     "phoneNumber": "010-632-9637",
-    "address": "803 Belmont Drive, Denver, CO",
+    "address": "44 Shirley Ave, West Chicago, IL",
     "birthday": "December 4, 1978",
     "purchaseHistory": [{
-            "item": "Microsoft office 365",
-            "price": "69.25",
+            "item": "SanDisk Extreme CZ80",
+            "price": "21.99",
             "paymentType": "Visa",
-            "date": "2016/06/16",
+            "date": "2017/4/21",
             "progress": "1",
-            "category": ["technology", "computers", "office"]
+            "category": ["technology", "computers"]
         },
         {
-            "item": "Office Star Char",
-            "price": "36.63",
+            "item": "Asus ROG Strix GL502VS-DS71",
+            "price": "1649.00",
             "paymentType": "Visa",
-            "date": "2016/06/16",
+            "date": "2017/7/28",
             "progress": "1",
-            "category": ["office", "furniture"]
+            "category": ["technology", "computers"]
         },
         {
-            "item": "Mother-of-pearl Pen",
-            "price": "109.63",
+            "item": "It Cosmetics",
+            "price": "49.14",
             "paymentType": "MasterCard",
-            "date": "2013/02/07",
+            "date": "2013/02/21",
             "progress": "1",
-            "category": ["supplies", "stationary", "office"]
+            "category": ["supplies", "cosmetics"]
         },
         {
             "item": "Royal Paper Shredder",
