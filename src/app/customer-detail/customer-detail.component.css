@@ -49,3 +49,101 @@ input {
 .darktext {
     color: #eb5d5e;
 }
+
+#container {
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.user-card {
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-left: 1vh solid #eb5d5e;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+h1,
+h3 {
+    padding: 1vh;
+    color: #eb5d5e;
+}
+
+p {
+    padding-left: 2vh;
+    color: #333333;
+}
+
+.float-up {
+    animation-name: float-up;
+    -webkit-animation-name: float-up;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+}
+
+.float-up:hover {
+    transform: scale(.95);
+    transition: .3s;
+}
+
+@-webkit-keyframes float-up {
+    0% {
+        -webkit-transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes float-up {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes float-up {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes float-up {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.signbuttons {
+    margin-bottom: 35px;
+    background: #eb5d5e;
+    border: none;
+}

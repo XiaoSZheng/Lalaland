@@ -1,5 +1,5 @@
-<div id="container">
-    <div class="row">
+<div id="container" style="overflow-y:auto; max-height:80vh;">
+    <div class="row" style="width:90%;">
         <div class="col-md-6">
             <div class="user-card float-up delay-1" *ngIf="currentCustomer" style="padding:5%;">
                 <div class="user-info" *ngIf="canEdit">
@@ -44,17 +44,17 @@
                 </table>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-11">
             <div class="user-card float-up delay-1 table-responsive" *ngIf="currentCustomer" style="padding:2%; margin-top:1%;">
                 <h3>Purchase History</h3>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
                 <table style="width:100%" class="table table-bordered table-striped table-hover">
                     <tr>
                         <th>Item</th>
                         <th>Price</th>
                         <th>Date</th>
                     </tr>
-                    <tr *ngFor="let items of currentCustomer.purchaseHistory" style="margin-bottom:5%;">
-
+                    <tr *ngFor="let items of currentCustomer.purchaseHistory | paginate: { itemsPerPage: 3, currentPage: p }" style="margin-bottom:5%;">
                         <ng-template #content let-c="close" let-d="dismiss">
                             <div class="modal-header">
                                 <h4 class="modal-title">{{items.item}}</h4>

@@ -8,6 +8,7 @@ import { HttpModule, Http } from '@angular/http';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -45,6 +46,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     BrowserModule,
     HttpModule,
+    NgxPaginationModule,
     HttpClientModule,
     AppRoutingModule,
     NgbModule.forRoot(),
