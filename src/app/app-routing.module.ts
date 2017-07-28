@@ -31,7 +31,7 @@ const appRoutes: Routes = [
         component: CustomerDetailComponent
       },
       {
-        path: 'Customer Detail',
+        path: 'Customer_Detail',
         component: CustomerDetailComponent
       },
       {

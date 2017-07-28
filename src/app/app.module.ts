@@ -4,7 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -18,7 +21,11 @@ import { Angular4StartUpComponent } from './angular4-start-up/angular4-start-up.
 import { AngularBootstrapComponent } from './angular-bootstrap/angular-bootstrap.component';
 
 import { CustomerService } from './customer-detail/customer.service';
+import { OrderbyPipe } from './orderby.pipe';
 
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -29,14 +36,23 @@ import { CustomerService } from './customer-detail/customer.service';
     CustomerDetailComponent,
     ProfileComponent,
     Angular4StartUpComponent,
-    AngularBootstrapComponent
+    AngularBootstrapComponent,
+    OrderbyPipe
   ],
   imports: [
     FormsModule,
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+    })
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent]

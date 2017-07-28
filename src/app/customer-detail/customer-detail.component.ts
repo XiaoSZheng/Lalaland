@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from './customer.service';
 import { Customer } from '../objects/customer';
-import { clone } from 'lodash';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,8 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./customer-detail.component.css']
 })
 export class CustomerDetailComponent implements OnInit {
-
-  customers: any[] = [];
+  order: string = 'name';
+  reverse: boolean = false;
+  customers: Customer[] = [];
   customerForm: boolean = false;
   editCustomerForm: boolean = false;
   isNewForm: boolean;
@@ -42,11 +42,10 @@ export class CustomerDetailComponent implements OnInit {
 
   findByAccount() {
     if (!this.accountNumber) {
-      console.log("rest");
       this._customerService.getCustomersFromData();
     } else {
-      this.customers = this.customers.filter((cust) => {
-        if (cust.account.indexOf(this.accountNumber) != -1) {
+      this.customers = this._customerService.currentCust.filter((cust) => {
+        if (cust.account.toString().indexOf(this.accountNumber.toString()) != -1) {
           return cust;
         }
       })
@@ -55,10 +54,9 @@ export class CustomerDetailComponent implements OnInit {
 
   findByName(){
     if (!this.accountName) {
-      console.log("rest");
       this._customerService.getCustomersFromData();
     } else {
-      this.customers = this.customers.filter((cust) => {
+      this.customers = this._customerService.currentCust.filter((cust) => {
         if (cust.name.indexOf(this.accountName) != -1) {
           return cust;
         }
@@ -67,9 +65,15 @@ export class CustomerDetailComponent implements OnInit {
   }
 
   goToProfile(cust){
-    console.log("Customer Detail; " + cust);
     this._customerService.setCurrentCustomer(cust);
     this.router.navigate(['/Dashboard/Profile']);
+  }
+
+    setOrder(value: string) {
+    if (this.order === value) {
+      this.reverse = !this.reverse;
+    }
+    this.order = value;
   }
 
 }

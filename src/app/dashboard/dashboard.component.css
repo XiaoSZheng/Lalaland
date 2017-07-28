@@ -2,12 +2,6 @@
     height: 100%;
 }
 
-.row {
-    margin: 0;
-    padding: 0;
-    height: 85vh;
-}
-
 header {
     /* Joy Red #eb5d5e*/
     background: #383B42;
@@ -18,15 +12,12 @@ header {
 
 #logo {
     background: #383B42;
-    float: left;
-    width: 15vw;
-    text-align: center;
-    height: 100%;
 }
 
-#logo img {
+
+/* #logo img {
     width: 45%;
-}
+} */
 
 #headerContent {
     float: left;

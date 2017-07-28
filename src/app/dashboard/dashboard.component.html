@@ -1,13 +1,16 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<div id="contentContainer">
-    <header class="col-md-12 ">
-        <div id="headerContainer" class="setToLeft">
-            <div id="logo">
-                <img src="../../assets/QVC.png" />
-            </div>
-            <div id="headerContent">
-                <h1>OECS</h1>
-            </div>
+<div id="">
+    <header class="row" style="max-height: 15vh;">
+        <div class="col-md-2" id="logo">
+            <img src="../../assets/QVC.png" style="height: 15vh; margin-left: 15%;" />
+        </div>
+        <div class="col-md-5">
+            <h1 class="text-center" style="margin-top:5%;">OECS</h1>
+        </div>
+        <div class="col-md-5">
+            <span *ngIf="hasCurrentUser">
+                            <h6 style="margin-top:10%;">{{currentCustomer.name}}</h6>
+                        </span>
         </div>
     </header>
     <div class="row">
@@ -15,27 +18,27 @@
             <nav>
                 <button id="landing" routerLink="/Landing Page">
       <i class="fa fa-home" aria-hidden="true"></i>
-      <span class="text">Landing Page</span>
+      <span class="text">{{'Landing Page' | translate }}</span>
     </button>
-                <button id="customerDetails" routerLink="./Customer Detail">
+                <button id="customerDetails" routerLink="./Customer_Detail">
       <i class="fa fa-info" aria-hidden="true"></i>
-      <span class="text">Customer Search</span>
+      <span class="text">{{'Customer Search' | translate }}</span>
     </button>
                 <button id="profile" routerLink="./Profile">
       <i class="fa fa-user-o" aria-hidden="true"></i>
-      <span class="text">Profile</span>
+      <span class="text">{{'Profile' | translate }}</span>
     </button>
                 <button id="Angular4StartUp" routerLink="./Angular4StartUp">
       <i class="fa fa-font" aria-hidden="true"></i>
-      <span class="text">Angular 4</span>
+      <span class="text">{{'Angular 4' | translate }}</span>
     </button>
                 <button id="Bootstrap" routerLink="./Bootstrap">
       <i class="fa fa-bold" aria-hidden="true"></i>
-      <span class="text">Bootstrap</span>
+      <span class="text">{{'Bootstrap' | translate }}</span>
     </button>
                 <button id="HeheXD" routerLink="./HeheXD">
       <i class="fa fa-times-rectangle-o" aria-hidden="true"></i>
-      <span class="text">404 Page</span>
+      <span class="text">{{'404 Page' | translate }}</span>
     </button>
             </nav>
         </section>

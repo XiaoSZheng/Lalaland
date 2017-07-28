@@ -1,8 +1,18 @@
 <div id="container">
-    <h1>Profile</h1>
     <div class="user-card flex-container float-up delay-1" *ngIf="currentCustomer">
-        <div class="user-info">
-            <h1>Customer</h1>
+        <div class="user-info" *ngIf="canEdit" style="width: 75%; margin-left: 10%; padding-bottom:5%;">
+            <h1>Customer <i class="fa fa-edit" (click)="editMode()"></i></h1>
+            <br><label>Account:</label><br>
+            <input class="form-control" [(ngModel)]="currentCustomer.account" />
+            <br><label>Name:</label><br>
+            <input class="form-control" [(ngModel)]="currentCustomer.name" style="width:100%;" />
+            <br><label>Address:</label><br>
+            <input class="form-control" [(ngModel)]="currentCustomer.address" />
+            <br>
+            <button (click)="doneEdit()" class="btn btn-primary signbuttons  right">Save</button>
+        </div>
+        <div class="user-info" *ngIf="!canEdit">
+            <h1>Customer <i class="fa fa-edit" (click)="editMode()"></i></h1>
             <p>Number: {{ currentCustomer.account }}</p>
             <p>Name: {{ currentCustomer.name }}</p>
             <p>Address: {{ currentCustomer.address }}</p>

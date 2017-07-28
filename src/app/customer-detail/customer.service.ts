@@ -10,8 +10,10 @@ export class CustomerService{
 
   public currentCustomer = new Subject<any>();
   private currentCustSingle: Customer;
-  private currentCust: Customer[];
+  public currentCust: Customer[];
   public matchedNamesSubject = new Subject<any>();
+  languges = ['en','fr','it','de','jp'];
+  languageCount = 0;
 
   constructor(private http:Http){ }
 
