@@ -4,160 +4,206 @@
         <div class="title-word">Powered</div>
         <div class="title-word">Bootstrap</div>
     </div>
-    <ngb-tabset>
+    <div class="col-md-12">
+        <ngb-tabset class="col-md-12" style="overflow:auto">
 
-        <ngb-tab title="Accordion">
-            <ng-template ngbTabContent>
-                <br>
-                <br>
-                <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                    <ngb-panel title="Simple">
-                        <ng-template ngbPanelContent>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tellus quis mollis pulvinar. Sed venenatis risus eu dignissim ornare. Sed dignissim nec risus sit amet congue. Proin a quam ut massa luctus pulvinar non sed velit. Sed non sem tellus.
-                            Vivamus interdum velit vel leo mattis, sed imperdiet neque vehicula. Quisque in blandit mi, non faucibus massa. Aliquam odio purus, convallis ac ultrices vitae, pharetra in tortor.
-                        </ng-template>
-                    </ngb-panel>
-                    <ngb-panel>
-                        <ng-template ngbPanelTitle>
-                            <span>&#9733; <b>Fancy</b> title &#9733;</span>
-                        </ng-template>
-                        <ng-template ngbPanelContent>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tellus quis mollis pulvinar. Sed venenatis risus eu dignissim ornare. Sed dignissim nec risus sit amet congue. Proin a quam ut massa luctus pulvinar non sed velit. Sed non sem tellus.
-                            Vivamus interdum velit vel leo mattis, sed imperdiet neque vehicula. Quisque in blandit mi, non faucibus massa. Aliquam odio purus, convallis ac ultrices vitae, pharetra in tortor.
-                        </ng-template>
-                    </ngb-panel>
-                </ngb-accordion>
-            </ng-template>
-        </ngb-tab>
+            <ngb-tab title="Accordion">
+                <ng-template ngbTabContent>
+                    <br>
+                    <br>
+                    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+                        <ngb-panel title="Simple">
+                            <ng-template ngbPanelContent>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tellus quis mollis pulvinar. Sed venenatis risus eu dignissim ornare. Sed dignissim nec risus sit amet congue. Proin a quam ut massa luctus pulvinar non sed velit. Sed non sem tellus.
+                                Vivamus interdum velit vel leo mattis, sed imperdiet neque vehicula. Quisque in blandit mi, non faucibus massa. Aliquam odio purus, convallis ac ultrices vitae, pharetra in tortor.
+                            </ng-template>
+                        </ngb-panel>
+                        <ngb-panel>
+                            <ng-template ngbPanelTitle>
+                                <span>&#9733; <b>Important</b> &#9733;</span>
+                            </ng-template>
+                            <ng-template ngbPanelContent>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum tellus quis mollis pulvinar. Sed venenatis risus eu dignissim ornare. Sed dignissim nec risus sit amet congue. Proin a quam ut massa luctus pulvinar non sed velit. Sed non sem tellus.
+                                Vivamus interdum velit vel leo mattis, sed imperdiet neque vehicula. Quisque in blandit mi, non faucibus massa. Aliquam odio purus, convallis ac ultrices vitae, pharetra in tortor.
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>
+                </ng-template>
+            </ngb-tab>
 
-        <ngb-tab title="Radio Button">
-            <ng-template ngbTabContent>
-                <br>
-                <br>
-                <div [(ngModel)]="model" ngbRadioGroup name="radioBasic">
-                    <label class="btn btn-primary">
+            <ngb-tab title="Radio Button">
+                <ng-template ngbTabContent>
+                    <br>
+                    <br>
+                    <div [(ngModel)]="model" ngbRadioGroup name="radioBasic">
+                        <label class="btn btn-primary">
                 <input type="radio" [value]="1">1
           </label>
-                    <label class="btn btn-primary">
+                        <label class="btn btn-primary">
                 <input type="radio" [value]="2">2
               </label>
-                    <label class="btn btn-primary">
+                        <label class="btn btn-primary">
                 <input type="radio" [value]="3">3
           </label>
-                </div>
-                <hr>
-                <pre>{{model}}</pre>
-            </ng-template>
-        </ngb-tab>
-
-        <ngb-tab title="Collapse">
-            <ng-template ngbTabContent>
-                <br>
-                <br>
-                <p>
-                    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Toggle</button>
-                </p>
-                <div id="collapseExample" [ngbCollapse]="isCollapsed">
-                    <div class="card">
-                        <div class="card-block">
-                            You can collapse this card by clicking Toggle
-                        </div>
                     </div>
-                </div>
-            </ng-template>
-        </ngb-tab>
+                    <hr>
+                    <pre>{{model}}</pre>
+                </ng-template>
+            </ngb-tab>
 
-        <ngb-tab title="Date Popup">
-            <ng-template ngbTabContent>
-                <br>
-                <br>
-                <form class="form-inline">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-                            <div class="input-group-addon" (click)="d.toggle()">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
+            <ngb-tab title="Collapse">
+                <ng-template ngbTabContent>
+                    <br>
+                    <br>
+                    <p>
+                        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Toggle</button>
+                    </p>
+                    <div id="collapseExample" [ngbCollapse]="isCollapsed">
+                        <div class="card">
+                            <div class="card-block">
+                                More utilization of space without redirecting
                             </div>
                         </div>
                     </div>
-                </form>
+                </ng-template>
+            </ngb-tab>
 
-                <hr/>
-                <pre>Model: {{ model | json }}</pre>
-            </ng-template>
-        </ngb-tab>
+            <ngb-tab title="Date Popup">
+                <ng-template ngbTabContent>
+                    <br>
+                    <br>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                                <div class="input-group-addon" (click)="d.toggle()">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
 
-        <ngb-tab title="Dropdown">
-            <ng-template ngbTabContent>
-                <br>
-                <br>
-                <div ngbDropdown class="d-inline-block">
-                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
-                        <button class="dropdown-item">Action - 1</button>
-                        <button class="dropdown-item">Another Action</button>
-                        <button class="dropdown-item">Something else is here</button>
-                    </div>
-                </div>
-            </ng-template>
-        </ngb-tab>
+                    <hr/>
+                    <pre>Model: {{ model | json }}</pre>
+                </ng-template>
+            </ngb-tab>
 
-        <ngb-tab title="Modal">
-            <ng-template ngbTabContent>
-                <br>
-                <br>
-                <ng-template #content let-c="close" let-d="dismiss">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Modal title</h4>
-                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>One fine body text&hellip;</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+            <ngb-tab title="Dropdown">
+                <ng-template ngbTabContent>
+                    <br>
+                    <br>
+                    <div ngbDropdown class="d-inline-block">
+                        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
+                            <button class="dropdown-item">Action - 1</button>
+                            <button class="dropdown-item">Another Action</button>
+                            <button class="dropdown-item">Something else is here</button>
+                        </div>
                     </div>
                 </ng-template>
+            </ngb-tab>
 
-                <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-            </ng-template>
-        </ngb-tab>
-
-        <ngb-tab title="Popover">
-            <ng-template ngbTabContent>
-                <div class="col-md-12">
+            <ngb-tab title="Popup">
+                <ng-template ngbTabContent>
                     <br>
                     <br>
-                    <button type="button" class="btn btn-secondary" placement="top" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Popover on top" #popover="ngbPopover" triggers="mouseenter:mouseleave">Open Popover</button>
+                    <ng-template #content let-c="close" let-d="dismiss">
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="color:red;">Feature Rich Modal</h4>
+                            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Age</th>
+                                    <th>View</th>
+                                </tr>
+                                <tr style="padding-bottom:6%;">
+                                    <td>Jill</td>
+                                    <td>Smith</td>
+                                    <td>50</td>
+                                    <td><button class="btn btn-sm btn-primary" (click)="c('Close click')">View</button></td>
+                                </tr>
+                                <tr style="margin-bottom:3%;">
+                                    <td>Eve</td>
+                                    <td>Jackson</td>
+                                    <td>94</td>
+                                    <td><button class="btn btn-sm btn-primary" (click)="c('Close click')">View</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" (click)="c('Close click')">OK</button>
+                        </div>
+                    </ng-template>
 
-                    <hr />
+                    <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+                </ng-template>
+            </ngb-tab>
 
-                    <p>
-                        Popover is currently: <code>{{ popover.isOpen() ? 'open' : 'closed' }}</code>
-                    </p>
-                </div>
-            </ng-template>
-        </ngb-tab>
+            <ngb-tab title="Hovering">
+                <ng-template ngbTabContent>
+                    <div class="col-md-12">
+                        <ng-template #popContent>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr style="padding-bottom:6%;">
+                                    <td>J844</td>
+                                    <td>125.52</td>
+                                </tr>
+                                <tr style="margin-bottom:3%;">
+                                    <td>A45113</td>
+                                    <td>34.43</td>
 
-        <ngb-tab title="Typeahead">
-            <ng-template ngbTabContent>
-                <br>
-                <br> A typeahead example that gets values from a static <code>string[]</code>
-                <ul>
-                    <li><code>debounceTime</code> operator</li>
-                    <li>kicks in only if 2+ characters typed</li>
-                    <li>limits to 10 results</li>
-                </ul>
-                <div class="col-md-12">
-                    <label for="typeahead-basic">Search for a state:</label>
-                    <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" />
-                    <hr>
-                    <pre>Model: {{ model | json }}</pre>
-                </div>
-            </ng-template>
-        </ngb-tab>
+                                </tr>
+                                <tr style="padding-bottom:6%;">
+                                    <td>{{testItem}}</td>
+                                    <td>{{testPrice}}</td>
+                                </tr>
+                            </table>
+                        </ng-template>
+                        <label>Item:</label>
+                        <input type="text" class="form-content" [(ngModel)]="testItem" />
+                        <label>Price:</label>
+                        <input type="text" class="form-content" [(ngModel)]="testPrice" />
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-secondary" placement="top" [ngbPopover]="popContent" popoverTitle="Data About Items" #popover="ngbPopover" triggers="click">Open Popover</button>
 
-    </ngb-tabset>
+                        <button type="button" class="btn btn-secondary" placement="bottom" ngbPopover="Content on bottom" popoverTitle="Popover on top" #popover="ngbPopover" triggers="mouseenter:mouseleave">Open Popover</button>
+
+                        <button type="button" class="btn btn-secondary" placement="right" ngbPopover="Content on Side" popoverTitle="Popover on top" #popover="ngbPopover" triggers="click">Open Popover</button>
+
+                        <hr />
+
+                    </div>
+                </ng-template>
+            </ngb-tab>
+
+            <ngb-tab title="Auto Detecting">
+                <ng-template ngbTabContent>
+                    <br>
+                    <br> A typeahead takes in the characters you are typing filters through a defined list
+                    <ul>
+                        <li>kicks in only if 2+ characters typed</li>
+                        <li>limits to 10 results</li>
+                    </ul>
+                    <div class="col-md-12">
+                        <label for="typeahead-basic">Search for a state:</label>
+                        <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" />
+                        <hr>
+                        <pre>Model: {{ model | json }}</pre>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+
+        </ngb-tabset>
+    </div>
 </body>

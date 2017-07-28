@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../customer-detail/customer.service';
 import { Customer } from '../objects/customer';
 import { Router } from '@angular/router';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-profile',
@@ -14,7 +15,7 @@ export class ProfileComponent implements OnInit {
   public currentCustomer: Customer;
   canEdit:boolean = false;
 
-  constructor(private _customerService: CustomerService, private router: Router) {
+  constructor(private _customerService: CustomerService, private router: Router, private modalService: NgbModal) {
     _customerService.matchedNamesSubject.subscribe((customerList) => {
       this.customers = customerList;
     });
@@ -26,7 +27,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.currentCustomer = this._customerService.getCurrentCustomer();
-    console.log(this.currentCustomer == undefined)
     if(this.currentCustomer == undefined){
       this.router.navigate(['/Dashboard/Customer_Detail']);
     }
@@ -38,6 +38,10 @@ export class ProfileComponent implements OnInit {
 
   doneEdit(){
     this.router.navigate(['/Dashboard/Customer_Detail']);
+  }
+
+    open(content) {
+    this.modalService.open(content, { windowClass: 'dark-modal', size: 'lg'});
   }
 
 }

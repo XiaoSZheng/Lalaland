@@ -27,7 +27,6 @@ export class CustomerService{
       }; 
 
   setCurrentCustomer(customer){
-    console.log("Customer service; " + customer);
     this.currentCustSingle = customer;
     this.currentCustomer.next(this.currentCustSingle);
   }

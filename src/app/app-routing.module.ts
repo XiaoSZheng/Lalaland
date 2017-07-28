@@ -11,6 +11,7 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
 import { ProfileComponent } from './profile/profile.component';
 import { Angular4StartUpComponent } from './angular4-start-up/angular4-start-up.component';
 import { AngularBootstrapComponent } from './angular-bootstrap/angular-bootstrap.component';
+import { NewCustomerComponent } from './new-customer/new-customer.component';
 
 const appRoutes: Routes = [
   {
@@ -41,6 +42,10 @@ const appRoutes: Routes = [
       {
         path: 'Angular4StartUp',
         component: Angular4StartUpComponent
+      },
+      {
+        path: 'new-customer',
+        component: NewCustomerComponent
       },
       {
         path: 'Bootstrap',

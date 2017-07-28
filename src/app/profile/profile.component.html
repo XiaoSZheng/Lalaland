@@ -1,21 +1,98 @@
 <div id="container">
-    <div class="user-card flex-container float-up delay-1" *ngIf="currentCustomer">
-        <div class="user-info" *ngIf="canEdit" style="width: 75%; margin-left: 10%; padding-bottom:5%;">
-            <h1>Customer <i class="fa fa-edit" (click)="editMode()"></i></h1>
-            <br><label>Account:</label><br>
-            <input class="form-control" [(ngModel)]="currentCustomer.account" />
-            <br><label>Name:</label><br>
-            <input class="form-control" [(ngModel)]="currentCustomer.name" style="width:100%;" />
-            <br><label>Address:</label><br>
-            <input class="form-control" [(ngModel)]="currentCustomer.address" />
-            <br>
-            <button (click)="doneEdit()" class="btn btn-primary signbuttons  right">Save</button>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="user-card float-up delay-1" *ngIf="currentCustomer" style="padding:5%;">
+                <div class="user-info" *ngIf="canEdit">
+                    <div class="col-md-6">
+                        <h1>Customer </h1>
+                    </div>
+                    <div class="col-md-6"> <i class="fa fa-edit" title="Read-Only" (click)="editMode()"></i> </div>
+
+                    <br><label>Account:</label><br>
+                    <input class="form-control" [(ngModel)]="currentCustomer.account" />
+                    <br><label>Name:</label><br>
+                    <input class="form-control" [(ngModel)]="currentCustomer.name" style="width:100%;" />
+                    <br><label>Address:</label><br>
+                    <input class="form-control" [(ngModel)]="currentCustomer.address" />
+                    <br>
+                    <button (click)="doneEdit()" class="btn btn-primary signbuttons  right">Save</button>
+                </div>
+                <div class="user-info" *ngIf="!canEdit">
+                    <div class="col-md-6">
+                        <h1>Customer </h1>
+                    </div>
+                    <div class="col-md-6"> <i class="fa fa-edit" title="Edit" (click)="editMode()"></i> </div>
+                    <p>Number: {{ currentCustomer.account }}</p>
+                    <p>Name: {{ currentCustomer.name }}</p>
+                    <p>Address: {{ currentCustomer.address }}</p>
+                </div>
+            </div>
         </div>
-        <div class="user-info" *ngIf="!canEdit">
-            <h1>Customer <i class="fa fa-edit" (click)="editMode()"></i></h1>
-            <p>Number: {{ currentCustomer.account }}</p>
-            <p>Name: {{ currentCustomer.name }}</p>
-            <p>Address: {{ currentCustomer.address }}</p>
+        <div class="col-md-5">
+            <div class="user-card float-up delay-1 table-responsive" *ngIf="currentCustomer" style="padding:5%;">
+                <h3>Information</h3>
+                <label>Status:</label><strong>Active</strong>
+                <table class="table table-bordered table-striped table-hover">
+                    <tr>
+                        <th>Hold</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Fraud</td>
+                        <td>Information about customer that a rep would need to know</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="user-card float-up delay-1 table-responsive" *ngIf="currentCustomer" style="padding:2%; margin-top:1%;">
+                <h3>Purchase History</h3>
+                <table style="width:100%" class="table table-bordered table-striped table-hover">
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr *ngFor="let items of currentCustomer.purchaseHistory" style="margin-bottom:5%;">
+
+                        <ng-template #content let-c="close" let-d="dismiss">
+                            <div class="modal-header">
+                                <h4 class="modal-title">{{items.item}}</h4>
+                                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="../assets/images/ring.jpg" />
+                                    </div>
+                                    <div class="col-md-5">
+                                        <strong>Price</strong><br>
+                                        <label>{{items.price}}</label>
+                                        <br><br>
+                                        <strong>Date of Purchase</strong><br>
+                                        <label>{{items.date}}</label>
+                                        <br><br>
+                                        <strong>Payment Type</strong><br>
+                                        <label>{{items.paymentType}}</label>
+                                        <br><br>
+                                        <strong>Progress</strong><br>
+                                        <label>{{items.progress}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" (click)="c('Close click')">OK</button>
+                            </div>
+                        </ng-template>
+
+                        <td><strong style="cursor: pointer" (click)="open(content)">{{items.item}}</strong></td>
+                        <td>{{items.price}}</td>
+                        <td>{{items.date}}</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </div>

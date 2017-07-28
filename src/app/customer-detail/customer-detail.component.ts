@@ -23,7 +23,6 @@ export class CustomerDetailComponent implements OnInit {
 
   constructor(private _customerService: CustomerService, private router: Router) {
     _customerService.matchedNamesSubject.subscribe((customerList) => {
-      console.log(customerList);
       this.customers = customerList;
     });
   }
@@ -45,7 +44,7 @@ export class CustomerDetailComponent implements OnInit {
       this._customerService.getCustomersFromData();
     } else {
       this.customers = this._customerService.currentCust.filter((cust) => {
-        if (cust.account.toString().indexOf(this.accountNumber.toString()) != -1) {
+        if (cust.account.toString().toLowerCase().indexOf(this.accountNumber.toString().toLowerCase()) != -1) {
           return cust;
         }
       })
@@ -57,7 +56,7 @@ export class CustomerDetailComponent implements OnInit {
       this._customerService.getCustomersFromData();
     } else {
       this.customers = this._customerService.currentCust.filter((cust) => {
-        if (cust.name.indexOf(this.accountName) != -1) {
+        if (cust.name.toLowerCase().indexOf(this.accountName.toLowerCase()) != -1) {
           return cust;
         }
       })
@@ -74,6 +73,14 @@ export class CustomerDetailComponent implements OnInit {
       this.reverse = !this.reverse;
     }
     this.order = value;
+  }
+
+  removeCustomer(cust){
+    this.customers.splice(this.customers.indexOf(cust), 1);
+  }
+
+  createMember(){
+    this.router.navigate(['/Dashboard/new-customer']);
   }
 
 }

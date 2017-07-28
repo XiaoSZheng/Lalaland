@@ -22,6 +22,7 @@ import { AngularBootstrapComponent } from './angular-bootstrap/angular-bootstrap
 
 import { CustomerService } from './customer-detail/customer.service';
 import { OrderbyPipe } from './orderby.pipe';
+import { NewCustomerComponent } from './new-customer/new-customer.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +38,8 @@ export function createTranslateLoader(http: HttpClient) {
     ProfileComponent,
     Angular4StartUpComponent,
     AngularBootstrapComponent,
-    OrderbyPipe
+    OrderbyPipe,
+    NewCustomerComponent
   ],
   imports: [
     FormsModule,

@@ -16,13 +16,11 @@ export class DashboardComponent implements OnInit {
     _customerService.currentCustomer.subscribe( (customer) => {
       this.currentCustomer = customer;
       this.hasCurrentUser = true;
-      console.log("dashboard constructing" + this.currentCustomer)
     })
    }
 
   ngOnInit() {
     this.currentCustomer = this._customerService.getCurrentCustomer();
-    console.log(this.currentCustomer == undefined)
     if(this.currentCustomer == undefined){
        this.hasCurrentUser = false;
     }else{

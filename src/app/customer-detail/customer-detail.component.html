@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input class="form-control" type="date" name="birthday" id="birthday" value="">
+                            <input class="form-control" type="text" name="phone" id="phone" placeholder="PHONE NUMBER">
                         </div>
                     </form>
                 </div>
@@ -58,10 +58,16 @@
         </div>
     </div>
     <div class="col-md-12 table-responsive" *ngIf="viewData == 1">
-        <label>Account:</label>
-        <input type="text" class="input input-md" [(ngModel)]="accountNumber" (keyup)="findByAccount();" />
-        <label>Name:</label>
-        <input type="text" class="input input-md" [(ngModel)]="accountName" (keyup)="findByName();" />
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-md-5">
+                <label>Account:</label>
+                <input type="text" class="form-control" [(ngModel)]="accountNumber" (keyup)="findByAccount();" />
+            </div>
+            <div class="col-md-5">
+                <label>Name:</label>
+                <input type="text" class="form-control" [(ngModel)]="accountName" (keyup)="findByName();" />
+            </div>
+        </div>
         <table class="table table-bordered table-striped table-hover" style="background-color:white;">
             <thead class="thead-inverse">
                 <tr>
@@ -81,17 +87,17 @@
                     <td>{{ customer.name }}</td>
                     <td>{{ customer.address }}</td>
                     <td>
-                        <button class="btn btn-info" (click)="showEditCustomerForm(customer)">
+                        <button class="btn btn-info" (click)="goToProfile(customer);">
                        <i class="fa fa-edit"> Edit</i>
               </button>
                         <button class="btn btn-danger" (click)="removeCustomer(customer)">
-                       <i class="fa fa-minus"> Delete</i>
+                       <i class="fa fa-minus"> Remove</i>
             </button>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <button class="btn btn-success" (click)="showEditCustomerForm()"><i class="fa fa-plus"> New Member</i></button>
+        <button class="btn btn-success" (click)="createMember()"><i class="fa fa-plus"> New Member</i></button>
         <br />
         <br />
     </div>
