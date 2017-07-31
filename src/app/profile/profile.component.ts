@@ -33,11 +33,13 @@ export class ProfileComponent implements OnInit {
   }
 
   editMode(){
-    this.canEdit = ! this.canEdit;
+    this.canEdit = !this.canEdit;
   }
 
   doneEdit(){
-    this.router.navigate(['/Dashboard/Customer_Detail']);
+    //this.router.navigate(['/Dashboard/Customer_Detail']);
+    this._customerService.setCurrentCustomer(this.currentCustomer);
+    this.canEdit = !this.canEdit;
   }
 
     open(content) {

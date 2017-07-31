@@ -1,10 +1,11 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operator/map';
 import { debounceTime } from 'rxjs/operator/debounceTime';
 import { distinctUntilChanged } from 'rxjs/operator/distinctUntilChanged';
+import { Router } from "@angular/router";
 
 const states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado',
   'Connecticut', 'Delaware', 'District Of Columbia', 'Federated States Of Micronesia', 'Florida', 'Georgia',
@@ -21,15 +22,22 @@ const states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'C
 })
 export class AngularBootstrapComponent {
   public model: any;
+ngbModalRef:NgbModalRef;
+
   search = (text$: Observable<string>) =>
     map.call(distinctUntilChanged.call(debounceTime.call(text$, 200)),
       term => term.length < 2 ? [] : states.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10));
 
   closeResult: string;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private router: Router) { }
 
   open(content) {
-    this.modalService.open(content, { windowClass: 'dark-modal' });
+    this.ngbModalRef = this.modalService.open(content, { windowClass: 'dark-modal' });
+  }
+
+  goToProfile(content){
+    this.ngbModalRef.close();
+    this.router.navigate(['/Dashboard/Profile']);
   }
 }

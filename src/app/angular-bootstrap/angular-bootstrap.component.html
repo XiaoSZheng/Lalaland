@@ -95,9 +95,9 @@
                     <div ngbDropdown class="d-inline-block">
                         <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
                         <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
-                            <button class="dropdown-item">Action - 1</button>
-                            <button class="dropdown-item">Another Action</button>
-                            <button class="dropdown-item">Something else is here</button>
+                            <button class="dropdown-item">First</button>
+                            <button class="dropdown-item">Second</button>
+                            <button class="dropdown-item">Third</button>
                         </div>
                     </div>
                 </ng-template>
@@ -125,14 +125,14 @@
                                 <tr style="padding-bottom:6%;">
                                     <td>Jill</td>
                                     <td>Smith</td>
-                                    <td>50</td>
-                                    <td><button class="btn btn-sm btn-primary" (click)="c('Close click')">View</button></td>
+                                    <td>35</td>
+                                    <td><button class="btn btn-sm btn-primary" (click)="goToProfile()">View</button></td>
                                 </tr>
                                 <tr style="margin-bottom:3%;">
-                                    <td>Eve</td>
+                                    <td>Evan</td>
                                     <td>Jackson</td>
-                                    <td>94</td>
-                                    <td><button class="btn btn-sm btn-primary" (click)="c('Close click')">View</button></td>
+                                    <td>33</td>
+                                    <td><button class="btn btn-sm btn-primary" (click)="goToProfile(content)">View</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -177,9 +177,9 @@
                         <br>
                         <button type="button" class="btn btn-secondary" placement="top" [ngbPopover]="popContent" popoverTitle="Data About Items" #popover="ngbPopover" triggers="click">Open Popover</button>
 
-                        <button type="button" class="btn btn-secondary" placement="bottom" ngbPopover="Content on bottom" popoverTitle="Popover on top" #popover="ngbPopover" triggers="mouseenter:mouseleave">Open Popover</button>
+                        <button type="button" class="btn btn-secondary" placement="bottom" ngbPopover="Content on bottom" popoverTitle="Popover under content" #popover="ngbPopover" triggers="mouseenter:mouseleave">Open Popover</button>
 
-                        <button type="button" class="btn btn-secondary" placement="right" ngbPopover="Content on Side" popoverTitle="Popover on top" #popover="ngbPopover" triggers="click">Open Popover</button>
+                        <button type="button" class="btn btn-secondary" placement="right" ngbPopover="Content on Side" popoverTitle="Popover on the right" #popover="ngbPopover" triggers="click">Open Popover</button>
 
                         <hr />
 

@@ -1,5 +1,5 @@
 
-import { Order } from "app/Objects/order";
+import { Order } from "app/objects/order";
 
 export class Customer {
 
